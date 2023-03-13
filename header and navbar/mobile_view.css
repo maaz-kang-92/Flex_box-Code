@@ -1,0 +1,51 @@
+/* just create design not declare the width according to the pexel (@media query)*/
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+li img {
+    margin-top: 10px;
+}
+
+.header {
+    background-color: rgb(210, 204, 134);
+    height: 200px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-between;
+}
+nav li {
+    
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+
+nav a {
+    text-decoration: none;
+    background-color: brown;
+    height: 40px;
+    width:400px;
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    border-radius: 10px;
+
+    display: block;
+    padding: .7rem;
+    text-align: center;
+
+}

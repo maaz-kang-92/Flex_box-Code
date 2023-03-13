@@ -1,0 +1,37 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+li img {
+    margin-top: 10px;
+}
+
+.header {
+    background-color: rgb(210, 204, 134);
+    height: 120px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-between;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem;
+
+}

@@ -1,0 +1,52 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    background-color: rgb(210, 204, 134);
+
+}
+
+header {
+    padding: 0.7rem;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+/* navigation styling - universal across breakpoints */
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-around;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    display: block;
+}
+
+nav li:nth-child(1) {
+    order: 2;
+}
+
+nav li:nth-child(2),
+nav li:nth-child(3) {
+    order: 1;
+}
+
+nav li:nth-child(4),
+nav li:nth-child(5) {
+    order: 3;
+}
