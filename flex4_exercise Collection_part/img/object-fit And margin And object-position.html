@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit file: </title>
+    <style>
+        /* The image keeps its aspect ratio, but is resized to fit within the given dimension */
+        .img1 {
+            background-color: wheat;
+            object-fit: contain;
+
+        }
+
+        /* The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit */
+        .img2 {
+            background-color: wheat;
+            object-fit: cover;
+        }
+
+        /* This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit */
+        .img3 {
+            background-color: wheat;
+            object-fit: fill;
+        }
+
+        /* The image is not resized */
+        .img4 {
+            background-color: wheat;
+            object-fit: none;
+        }
+
+        /* If we use object-fit:scale-down; the image is scaled_down to the smallest version of none or contain: */
+        .img5 {
+            background-color: wheat;
+            object-fit: scale-down;
+        }
+
+        /* it's used to together with object-fit to specify how an <img> or <video> should be positioned 
+            with x/y coordinates inside its "own content box" */
+        .img0 {
+            background-color: wheat;
+            /*positive x/y works right/bottom move  */
+            /* object-position: 10px 10px; */
+
+            /* and nagitive x/y works left/top move  */
+            object-position: -10px -10px;
+        }
+
+        .div1 {
+            width: 400px;
+            height: 280px;
+            margin: 20px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 30px;
+            position: static;
+            top: 20px;
+            left: 200px;
+
+        }
+
+        .div2 {
+            width: 400px;
+            height: 280px;
+            margin: 20px;
+            background-color: rgb(43, 0, 255);
+            color: white;
+            font-size: 30px;
+            position: relative;
+            top: 50px;
+            left: 800px;
+
+        }
+
+        .div3 {
+            width: 400px;
+            height: 280px;
+            margin: 20px;
+            background-color: rgb(108, 93, 183);
+            color: white;
+            font-size: 30px;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            opacity: .7;
+
+
+        }
+
+        .div4 {
+            width: 400px;
+            height: 280px;
+            margin: 20px;
+            background-color: rgb(20, 176, 46);
+            color: white;
+            font-size: 30px;
+            position: relative;
+
+        }
+
+        .div5 {
+            width: 200px;
+            height: 100px;
+
+            background-color: rgb(215, 220, 218);
+            color: rgb(20, 176, 46);
+            font-size: 30px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .div6 {
+            background-color: rgb(8, 104, 149);
+            box-sizing: border-box;
+            width: 960px;
+            height: 50px;
+            font-size: 30px;
+            color: white;
+            padding: 5px;
+            position: sticky;
+            top: 10px;
+            /*when go up to the top*/
+        }
+
+
+        .container img {
+            width: 700px;
+            height: 400px;
+            margin-left: 40px;
+            margin-top: 20px;
+            opacity: 0.5;
+        }
+
+        .container {
+            position: relative;
+            /* 40px gap form left to img therefore 740px is the size of <div> */
+            width: 740px;
+            height: 400px;
+        }
+
+        .div_child1 {
+            background-color: rgb(42, 46, 165);
+            width: 15%;
+            font-size: 25px;
+            color: rgb(246, 248, 249);
+            margin-left: 40px;
+            margin-top: 20px;
+            position: absolute;
+            top: 10px;
+            left: 0px;
+        }
+
+        .div_child2 {
+            background-color: brown;
+            width: 15%;
+            font-size: 25px;
+            color: rgb(246, 248, 249);
+            margin-left: 40px;
+            margin-top: 20px;
+            position: absolute;
+            top: 10px;
+            right: 0px;
+
+        }
+
+        .div_child3 {
+            background-color: rgb(18, 238, 69);
+            width: 18%;
+            font-size: 25px;
+            color: rgb(246, 248, 249);
+            margin-left: 40px;
+            margin-top: 20px;
+            position: absolute;
+            bottom: -10px;
+            left: 0px;
+
+        }
+
+
+        .div_child4 {
+            background-color: rgb(235, 241, 70);
+            width: 20%;
+            font-size: 25px;
+            color: rgb(246, 248, 249);
+            margin-left: 40px;
+            margin-top: 20px;
+            position: absolute;
+            bottom: -10px;
+            right: 0px;
+
+        }
+
+        .div_child5 {
+            background-color: rgb(255, 0, 0);
+            width: 20%;
+            font-size: 25px;
+            color: rgb(246, 248, 249);
+            margin-left: 40px;
+            margin-top: 20px;
+            position: absolute;
+            top: 180px;
+            left: 270px;
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    Simple Image: <br /><img class="img0" src="img/landscape.jpg" alt="This is land space" width="500px" height="400px">
+    <br />
+
+    Image with contain <br /><img class="img1" src="img/landscape.jpg" alt="This is land space" width="500px"
+        height="400px"> <br />
+
+    Image with cover <br /><img class="img2" src="img/landscape.jpg" alt="This is land space" width="500px"
+        height="400px"><br />
+
+    Image with fill <br /><img class="img3" src="img/landscape.jpg" alt="This is land space" width="500px"
+        height="400px"><br />
+
+    <div class="div6">
+        This is sticky position!
+    </div>
+
+    Image with none <br /><img class="img4" src="img/landscape.jpg" alt="This is land space" width="500px"
+        height="400px"><br />
+
+    Image with scale-down <br /><img class="img5" src="img/landscape.jpg" alt="This is land space" width="500px"
+        height="400px"><br />
+
+    <!-- practice of absolute and relative positions: -->
+    <!-- The position property specifies the type of positioning method used for an element 
+        (static, relative, fixed, absolute or sticky). -->
+
+    <!-- Static position elements are not affected by the top, bottom, left, and right properties.  -->
+    <div class="div1">
+        This is static position!
+    </div>
+
+    <!-- An element with position:relative; is positioned relative to its normal position.  -->
+    <div class="div2">
+        This is relative position!
+    </div>
+
+    <!-- An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled -->
+    <div class="div3">
+        This is fixed position!
+    </div>
+
+    <div class="div4">
+        <div class="div5">
+            This is absolute position!
+        </div>
+    </div>
+
+    <!-- more practice of relative and absolute position -->
+    <div class="container">
+        <img src="img/abstract.jpg" alt="This is abstract image: ">
+        <div class="div_child1">Top Left</div>
+        <div class="div_child2">Top Right</div>
+        <div class="div_child3">Bottom Left</div>
+        <div class="div_child4">Bottom Right</div>
+        <div class="div_child5">Center Text</div>
+    </div>
+
+    <!-- what is margin: 0 auto property! -->
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Margin_ auto: </title>
+    <style>
+        p {
+            font-size: 23px;
+            background-color: green;
+            color: white;
+            width: 40%;
+            margin: 25px 50px 75px 50px;
+            /*TRBL*/
+            margin: 25px 50px 75px;
+            /*T LR B*/
+            margin: 200px auto;
+            /* 300px TB and auto is used to center horizontal*/
+        }
+
+        .container1 {
+            border: 2px solid red;
+           
+        }
+
+        .child1 {
+            background-color: rgb(188, 234, 4);
+            color: white;
+            height: 200px;
+            width: 500px;
+            font-size: 28px;
+            
+            margin-left: 200px;
+        }
+        .child2 {
+            background-color: rgb(21, 241, 21);
+            color: white;
+            height: 200px;
+            width: 500px;
+            font-size: 28px;
+            
+            margin-left: 100px;
+        }
+
+        .container2 {
+            border: 2px solid rgb(34, 255, 0);
+            /* this will give 100px to its child <div> */
+            margin-left: 100px;
+        }
+
+        .child3 {
+            background-color: rgb(4, 154, 234);
+            color: white;
+            height: 200px;
+            width: 500px;
+            font-size: 28px;
+            /* also margin 100px in the parent <div> to child <div> */
+            margin:inherit;
+        }
+        .child4 {
+            background-color: rgb(21, 76, 241);
+            color: white;
+            height: 200px;
+            width: 500px;
+            font-size: 28px;
+            /* also margin 100px in the parent <div> to child <div> */
+            margin:inherit;
+        }
+        .container2 h2 {
+            margin:inherit;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <p>Asslam-o-Alikum! My name is Muhammad Maaz Ahmad!</p>
+
+    <div class="container1">
+        <h2>This is Without Inherit Margin: </h2>
+        <div class="child1"> My name is Maaz Ahmad!</div>
+        <div class="child2"> My Father name is Hafeez Ullah!</div>
+        
+    </div>
+ 
+    <div class="container2">
+    <h2>This is With Inherit Margin: </h2>
+        <div class="child3"> My name is Maaz Ahmad!</div>
+        <div class="child4"> My Father name is Hafeez Ullah!</div>
+    </div>
+</body>
+
+</html>
