@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>Text overlay Effect with Flexbox: </title>
+    <style>
+        /* Remember what's outside the media query is for mobile devices. 
+        The fundamental row declaration doesn't change. */
+
+        /* Basic figure and caption styling */
+        /* Turn off margin, set by browser */
+        
+        figure  {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-flow: column nowrap;
+            position: relative;
+            /* then we can apply absolute values in the child*/
+        }
+
+        /* caption styling  */
+        figcaption {
+            background-color: #0004ff;
+            color: white;
+            padding: 0;
+            position: absolute;
+            bottom: 0%;
+            width: 100%;
+            height:35%;
+            opacity: 0.7;
+            font-size: 35px;
+            color:rgb(41, 252, 231);
+            
+        }
+
+
+        /* reduces the top margin on the h2, bottom on the p, and leaves a 0.5rem gap between the two */
+        figcaption * {
+            margin: 0.5rem;
+        }
+
+        /* 100% till 600px upper images flexible into 48% */
+        img {
+            width: 100%;
+        }
+
+        /* at minimum 600px this condition will true. */
+        @media (min-width: 800px) {
+            .row {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+                gap: 1%;
+
+            }
+
+            figure {
+                flex-basis: 48%;
+                
+            }
+           figcaption {
+            background-color: rgb(255, 0, 217);
+            font-size: 24px;
+            color:rgb(222, 222, 222)
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Row 1: One box per column -->
+    <div class="row">
+        <figure>
+            <img src="https://assets.codepen.io/296057/fem-fb-one.png" alt="Image of bubbles through a microscope." />
+            <figcaption>
+                <h2>Bubbles</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://assets.codepen.io/296057/fem-fb-two.png" alt="Grid of grey squares with green wells." />
+
+            <figcaption>
+                <h2>Green or Grey</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://assets.codepen.io/296057/fem-fb-three.png"
+                alt="Wavy lines in summery colors like orange, light purple, and yellow." />
+
+            <figcaption>
+                <h2>Summer Waves</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://assets.codepen.io/296057/fem-fb-four.png" alt="Fibronacci sequence of spirals." />
+
+            <figcaption>
+                <h2>Spiraling Away</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </figcaption>
+        </figure>
+    </div>
+
+
+</body>
+
+</html>
